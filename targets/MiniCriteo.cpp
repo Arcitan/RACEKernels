@@ -69,6 +69,7 @@ int main() {
 		sketch.add(hashes);
 	}
 	delete[] hashes;
+	delete[] minHashes;
 
 	sketch.pprint(std::cout);
 

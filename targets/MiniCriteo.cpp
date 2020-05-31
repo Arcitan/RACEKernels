@@ -11,6 +11,7 @@
 #include "util.h"
 #include "driver.h"
 
+
 /*
 
 Heuristics for choosing reps and range
@@ -26,6 +27,19 @@ sigma = 20.0
 
 
 int main() {
+	std::cout << "Reading data..." << std::endl;
+	std::ifstream data_file("criteo_mini.txt");
+
+	std::vector<std::vector<double>> data;
+
+
+	ReadData(data_file, data);
+
+	for (const auto& r : data) {
+		for (auto &p : r)
+			std::cout << " " << p << " ";
+		std::cout << std::endl;
+	}
 
 	return 0;
 }

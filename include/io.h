@@ -10,6 +10,10 @@
 #include <algorithm>
 #include <unordered_map>
 
+
+bool ReadData(std::istream& in, std::vector<std::vector<double>> &vec);
+bool ReadData(std::istream& in, std::vector<std::vector<double>> &vec, size_t skip);
+
 bool VectorFeatures(std::istream& in, std::vector<double>& vec); 
 bool VectorFeatures(std::istream& in, std::vector<double>& vec, size_t skip); 
 /*

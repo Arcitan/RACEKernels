@@ -5,6 +5,10 @@ build/*
 bin/*
 results/*
 
+# IDE specific
+.idea/*
+cmake-build-debug/*
+
 *.temp
 
 # Text files, notes and literature
@@ -58,7 +62,6 @@ results/*
 *.dat
 *.log
 *.svm
-*.dat
 *.bin
 
 # Filesystems 

@@ -2,7 +2,7 @@
 # To make tests: make tests 
 # To make all experiment binaries: make binaries
 
-CXX = /usr/local/Cellar/gcc/9.1.0/bin/g++-9
+CXX = /usr/local/Cellar/gcc/9.3.0_1/bin/g++-9
 CFLAGS = -O3 -std=c++11 -fopenmp
 
 TESTS = tests_RACE.cpp tests_L2Hash.cpp tests_io.cpp tests_HBS.cpp tests_SKA.cpp tests_util.cpp tests_RangelessRACE.cpp tests_SRPHash.cpp
@@ -16,7 +16,7 @@ BIN_DIR = bin/
 INC := -I include
 
 # List of target executables
-TARGETS = KDETool.cpp HBSGenerate.cpp RSGenerate.cpp WSSTool.cpp RACEGenerate.cpp RACETool.cpp KCentersTool.cpp SKAGenerate.cpp
+TARGETS = RACEGenerate.cpp RACETool.cpp
 # covtype.cpp glove300d.cpp glove50d.cpp mnist.cpp
 TARGETS_DIR = targets/
 

@@ -13,8 +13,8 @@ class MinHash {
 
  public:
 	MinHash(int dimension, int number_of_hashes);
-	int* getHash(std::vector<int>& vec);
-	void getHash(std::vector<int>& vec, int* hashes);
+	int* getHash(const std::vector<double>& vec);
+	void getHash(const std::vector<double>& vec, int* hashes);
 	unsigned int internalHash(int input, int seed);
 }; 
 

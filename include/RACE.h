@@ -1,39 +1,39 @@
 #pragma once
 
+#include <vector>
 #include <iostream>
 #include <iomanip>
 #include <cstdint>
 
-
 typedef unsigned int race_sketch_t;
 
-class RACE 
-{
-public:
-    RACE(size_t R, size_t range); 
-    ~RACE(); 
 
-    void add(int *hashes); 
-    void subtract(int *hashes); 
-    void clear(); 
+class RACE {
+ public:
+	RACE(size_t R, size_t range);
+	~RACE();
 
-    double query(int *hashes); 
+	void add(const int* hashes);
+	void subtract(const int* hashes);
+	void clear();
 
-    void serialize(std::ostream &out); 
-    void deserialize(std::istream &in); 
+	double query(const int* hashes);
+	std::vector<double> queryVector(const int* hashes);
 
-    void pprint(std::ostream& out, int width = 3, bool format = true); 
-    
+	void serialize(std::ostream& out);
+	void deserialize(std::istream& in);
 
-    size_t max_counter(); 
-    void delta_unzip(const size_t dataset_size); 
-    void delta_zip(); 
+	void pprint(std::ostream& out, int width = 3, bool format = true);
 
-    private:
-        size_t _R, _range;
-        race_sketch_t* _sketch;
-        const uint8_t magic_number = 0x4D; // magic number for binary file IO
-        const uint8_t file_version_number = 0x01; // file version number 
+	size_t max_counter();
+	void delta_unzip(size_t dataset_size);
+	void delta_zip();
+
+ private:
+	size_t _R, _range;
+	race_sketch_t* _sketch;
+	const uint8_t magic_number = 0x4D; // magic number for binary file IO
+	const uint8_t file_version_number = 0x01; // file version number
 };
 
 

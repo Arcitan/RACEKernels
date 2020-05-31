@@ -5,7 +5,7 @@
 CXX = /usr/local/Cellar/gcc/9.3.0_1/bin/g++-9
 CFLAGS = -O3 -std=c++11 -fopenmp
 
-TESTS = tests_RACE.cpp tests_L2Hash.cpp tests_io.cpp tests_HBS.cpp tests_SKA.cpp tests_util.cpp tests_RangelessRACE.cpp tests_SRPHash.cpp
+TESTS = tests_L2Hash.cpp tests_MurmurHash.cpp tests_io.cpp tests_util.cpp tests_RACE.cpp
 TESTS_DIR = test/
 
 SRCS = RACE.cpp MurmurHash.cpp L2Hash.cpp io.cpp HBS.cpp SKA.cpp util.cpp RangelessRACE.cpp MinHash.cpp SRPHash.cpp L1Hash.cpp

@@ -66,3 +66,7 @@ cmake-build-debug/*
 
 # Filesystems 
 .DS_Store
+
+# local development stuff 
+.clangd
+compile_commands.json
